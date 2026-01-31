@@ -1,9 +1,9 @@
 extends Node2D
 
 var speed: float = 200.0
-var dash_speed: float = 600.0
-var dash_time: float = 0.15
-var dash_cooldown: float = 0.3
+var dash_speed: float = 1000.0
+var dash_time: float = 0.5
+var dash_cooldown: float = 0.0
 
 var dash_timer: float = 0.0
 var cooldown_timer: float = 0.0
