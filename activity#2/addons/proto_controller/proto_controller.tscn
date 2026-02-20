@@ -23,6 +23,9 @@ material_override = SubResource("StandardMaterial3D_iof21")
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ucva2")
 
+[node name="Healthbar" type="Label3D" parent="." unique_id=764612340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98174787, 0)
+
 [node name="Collider" type="CollisionShape3D" parent="." unique_id=1285139256]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.4, 0)
 shape = SubResource("CapsuleShape3D_iof21")

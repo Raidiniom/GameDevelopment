@@ -5,6 +5,8 @@
 
 extends CharacterBody3D
 
+@onready var health_bar: Label3D = $Healthbar
+
 ## Can we move around?
 @export var can_move : bool = true
 ## Are we affected by gravity?
@@ -54,9 +56,12 @@ var fall_velocity : float = 0.0
 var was_on_floor : bool = true
 
 @export var fall_dmg_threshold : float = 5.0
-@export var fall_dmg_multiplier : float = 2.5
+@export var fall_dmg_multiplier : float = 12.5
 
-var health : float = 100.0
+var health : int = 100
+
+var is_dead : bool = false
+var spawn_position : Vector3
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
@@ -66,6 +71,8 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	update_healthbar()
+	spawn_position = global_position
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -92,6 +99,13 @@ func _physics_process(delta: float) -> void:
 		var motion := (head.global_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		motion *= freefly_speed * delta
 		move_and_collide(motion)
+		return
+		
+	
+	# Death Mechanic
+	if is_dead:
+		if Input.is_action_just_pressed("respawn"):
+			respawn()
 		return
 	
 	# Apply gravity to velocity
@@ -147,11 +161,34 @@ func _physics_process(delta: float) -> void:
 
 func apply_damage(amount: float):
 	health -= amount
+	update_healthbar()
 	print("Player health: ", health)
 	print("damage recieve: ", amount)
 	
 	if health <= 0:
-		print("Player died")
+		die()
+
+func update_healthbar():
+	health_bar.text = "" + str(round(health))
+	
+
+func die():
+	is_dead = true
+	can_move = false
+	can_jump = false
+	velocity = Vector3.ZERO
+	health_bar.text = "Press Y to Respawn"
+	print("Player Died!!!")
+	
+
+func respawn():
+	is_dead = false
+	health = 100
+	global_position = spawn_position
+	can_move = true
+	can_jump = true
+	update_healthbar()
+	print("Player Respawned!!!")
 
 ## Rotate us to look around.
 ## Base of controller rotates around y (left/right). Head rotates around x (up/down).

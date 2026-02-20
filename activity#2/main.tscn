@@ -39,7 +39,7 @@ albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
 environment = SubResource("Environment_0xm2m")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=610898748]
-transform = Transform3D(-0.6484143, 0.007233427, 0.7612533, 0.5740721, 0.6613983, 0.48269406, -0.50000006, 0.75, -0.43301266, 0, 3.1219215, 0)
+transform = Transform3D(-0.6484143, 0.007233427, 0.7612533, 0.5740721, 0.6613983, 0.48269403, -0.50000006, 0.75, -0.43301263, 6.9785485, 5.2736607, -1.3824301)
 light_color = Color(0.96289045, 0.90864927, 0.88823277, 1)
 shadow_enabled = true
 
