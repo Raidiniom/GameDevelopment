@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://2smlts3vhjvp"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dm0k"]
+albedo_color = Color(0.24705882, 0.60784316, 0.043137256, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[node name="Main" type="Node3D" unique_id=817577498]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=986783814]
+environment = SubResource("Environment_0xm2m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=610898748]
+transform = Transform3D(-0.6484143, 0.007233427, 0.7612533, 0.5740721, 0.6613983, 0.48269406, -0.50000006, 0.75, -0.43301266, 0, 3.1219215, 0)
+light_color = Color(0.96289045, 0.90864927, 0.88823277, 1)
+shadow_enabled = true
+
+[node name="BaseFloor" type="CSGBox3D" parent="." unique_id=2115130267]
+use_collision = true
+size = Vector3(20, 0.5, 20)
+material = SubResource("StandardMaterial3D_7dm0k")
+
+[node name="Parkour" type="CSGCombiner3D" parent="." unique_id=1324819490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22879636, 0)
+use_collision = true
+
+[node name="Platform" type="CSGBox3D" parent="Parkour" unique_id=1802299688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5553582, 0.9873059, 1.709887)
+size = Vector3(0.5, 0.16982421, 0.5)
+material = SubResource("StandardMaterial3D_ig7tw")
+
+[node name="Platform2" type="CSGBox3D" parent="Parkour" unique_id=440802051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71892655, 1.3280734, 0.2365588)
+size = Vector3(0.5, 0.2, 0.5)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="Platform3" type="CSGBox3D" parent="Parkour" unique_id=294541553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.77164745, 1.675155, -1.2466962)
+size = Vector3(0.5, 0.2, 0.5)
+material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="Platform4" type="CSGBox3D" parent="Parkour" unique_id=1934917105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5619508, 0.07317817, 2.5690212)
+size = Vector3(0.5, 0.2, 0.5)
+material = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Platform5" type="CSGBox3D" parent="Parkour" unique_id=294401268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14715886, 0.6157906, 1.6731718)
+size = Vector3(0.5, 0.2, 0.5)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="ProtoController" parent="." unique_id=1407837436 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3252764, 0.24999976, 2.1839297)
+input_left = "left"
+input_right = "right"
+input_forward = "forward"
+input_back = "backward"
