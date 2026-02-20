@@ -49,6 +49,15 @@ var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 
+## Character Fall Mechanic
+var fall_velocity : float = 0.0
+var was_on_floor : bool = true
+
+@export var fall_dmg_threshold : float = 5.0
+@export var fall_dmg_multiplier : float = 2.5
+
+var health : float = 100.0
+
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
@@ -94,6 +103,7 @@ func _physics_process(delta: float) -> void:
 	if can_jump:
 		if Input.is_action_just_pressed(input_jump) and is_on_floor():
 			velocity.y = jump_velocity
+			print("Jumped")
 
 	# Modify speed based on sprinting
 	if can_sprint and Input.is_action_pressed(input_sprint):
@@ -115,9 +125,33 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		velocity.y = 0
 	
+	# Track maximum fall speed
+	if not is_on_floor():
+		fall_velocity = min(fall_velocity, velocity.y)
+	
 	# Use velocity to actually move
 	move_and_slide()
+	
+	# Landing detection
+	if is_on_floor() and not was_on_floor:
+		var impact_speed = abs(fall_velocity)
+		print("Impact Speed: ", impact_speed)
+		
+		if impact_speed > fall_dmg_threshold:
+			var damage = (impact_speed - fall_dmg_threshold) * fall_dmg_multiplier
+			apply_damage(damage)
+			
+		fall_velocity = 0.0
+		
+	was_on_floor = is_on_floor()
 
+func apply_damage(amount: float):
+	health -= amount
+	print("Player health: ", health)
+	print("damage recieve: ", amount)
+	
+	if health <= 0:
+		print("Player died")
 
 ## Rotate us to look around.
 ## Base of controller rotates around y (left/right). Head rotates around x (up/down).
@@ -130,7 +164,6 @@ func rotate_look(rot_input : Vector2):
 	rotate_y(look_rotation.y)
 	head.transform.basis = Basis()
 	head.rotate_x(look_rotation.x)
-
 
 func enable_freefly():
 	collider.disabled = true

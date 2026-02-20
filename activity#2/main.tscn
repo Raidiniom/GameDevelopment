@@ -63,7 +63,7 @@ size = Vector3(0.5, 0.2, 0.5)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="Platform3" type="CSGBox3D" parent="Parkour" unique_id=294541553]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.77164745, 1.675155, -1.2466962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.77164745, 1.675155, -1.1361489)
 size = Vector3(0.5, 0.2, 0.5)
 material = SubResource("StandardMaterial3D_h2yge")
 
@@ -76,6 +76,21 @@ material = SubResource("StandardMaterial3D_1bvp3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14715886, 0.6157906, 1.6731718)
 size = Vector3(0.5, 0.2, 0.5)
 material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Platform6" type="CSGBox3D" parent="Parkour" unique_id=651826113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7843175, 2.7824688, -3.0912669)
+size = Vector3(0.5, 0.16982421, 0.5)
+material = SubResource("StandardMaterial3D_ig7tw")
+
+[node name="Platform7" type="CSGBox3D" parent="Parkour" unique_id=1325304663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7843175, 2.1294756, -2.2874744)
+size = Vector3(0.5, 0.16982421, 0.5)
+material = SubResource("StandardMaterial3D_ig7tw")
+
+[node name="Platform8" type="CSGBox3D" parent="Parkour" unique_id=1611496471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7843175, 3.0990686, -4.20036)
+size = Vector3(0.5, 0.16982421, 0.5)
+material = SubResource("StandardMaterial3D_ig7tw")
 
 [node name="ProtoController" parent="." unique_id=1407837436 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3252764, 0.24999976, 2.1839297)
