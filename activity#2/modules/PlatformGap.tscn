@@ -1,0 +1,52 @@
+[gd_scene format=4 uid="uid://32jlw28etxrm"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ci7l1"]
+_surfaces = [{
+"aabb": AABB(-1.5, -0.125, -2, 3, 0.25, 4),
+"attribute_data": PackedByteArray("AACAPwAAAAAAAAAAAACAPgAAgD8AAIA+AACAPwAAAAAAAEA/AAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AABAPwAAAAAAAIA/AAAAAAAAAAAAAIA+AACAPwAAgD4AAAAAAACAPwAAAAAAAAAAAAAAAAAAAAAAAIA+AACAPwAAgD8AAEA/AAAAAAAAQD8AAIA/AAAAAAAAgD8AAIA/AABAPwAAAAAAAEA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAIA+AACAPwAAAAAAAAAAAACAPwAAgD8AAEA/AAAAAAAAQD8AAIA/AACAPwAAgD8AAIA/AABAPwAAAAAAAIA/AAAAAAAAAAAAAAAAAACAPwAAgD4AAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAAAAAAAAAAACAPgAAgD8AAIA+AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAQD8AAAAAAAAAAAAAgD8AAIA/AABAPwAAAAAAAEA/AAAAAAAAAAAAAIA+AACAPwAAgD4AAAAAAACAPwAAAAAAAAAAAAAAAAAAAAAAAIA+AACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AAAAAAAAAAAAAIA/AACAPwAAAAAAAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 72,
+"vertex_data": PackedByteArray("AADAvwAAAL4AAADAAADAvwAAAD4AAIC/AADAvwAAAL4AAIC/AADAvwAAAL4AAADAAADAvwAAAL4AAIC/AADAPwAAAL4AAADAAADAvwAAAL4AAADAAADAPwAAAL4AAADAAADAvwAAAD4AAADAAADAvwAAAL4AAABAAADAvwAAAL4AAIA/AADAvwAAAD4AAABAAADAvwAAAL4AAABAAADAPwAAAL4AAIA/AADAvwAAAL4AAIA/AADAvwAAAL4AAADAAADAvwAAAD4AAADAAADAvwAAAD4AAIC/AADAvwAAAD4AAADAAADAPwAAAD4AAIC/AADAvwAAAD4AAIC/AADAvwAAAD4AAABAAADAvwAAAL4AAIA/AADAvwAAAD4AAIA/AADAvwAAAL4AAABAAADAvwAAAD4AAABAAADAPwAAAD4AAABAAADAvwAAAD4AAABAAADAvwAAAD4AAIA/AADAPwAAAD4AAABAAADAPwAAAL4AAADAAADAvwAAAL4AAIC/AADAPwAAAL4AAIC/AADAPwAAAL4AAADAAADAPwAAAL4AAIC/AADAPwAAAD4AAADAAADAvwAAAL4AAABAAADAPwAAAL4AAABAAADAPwAAAL4AAIA/AADAvwAAAL4AAABAAADAPwAAAD4AAABAAADAPwAAAL4AAABAAADAPwAAAL4AAABAAADAPwAAAD4AAIA/AADAPwAAAL4AAIA/AADAvwAAAD4AAADAAADAPwAAAL4AAADAAADAPwAAAD4AAADAAADAvwAAAD4AAADAAADAPwAAAD4AAADAAADAPwAAAD4AAIC/AADAPwAAAD4AAADAAADAPwAAAL4AAIC/AADAPwAAAD4AAIC/AADAPwAAAD4AAABAAADAvwAAAD4AAIA/AADAPwAAAD4AAIA/AADAPwAAAL4AAABAAADAPwAAAD4AAABAAADAPwAAAD4AAIA/AADAvwAAAD4AAIC/AADAPwAAAL4AAIC/AADAvwAAAL4AAIC/AADAvwAAAL4AAIA/AADAPwAAAD4AAIA/AADAvwAAAD4AAIA/AADAPwAAAL4AAIA/AADAPwAAAD4AAIA/AADAvwAAAL4AAIA/AADAPwAAAL4AAIC/AADAvwAAAD4AAIC/AADAPwAAAD4AAIC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//////AAD/f/////8AAP9//////wAAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA////f/9//n////9//3/+f////3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5//3//fwAA/7//f/9/AAD/v/9//38AAP+//////wAA/7//////AAD/v/////8AAP+//////wAA/7//////AAD/v/////8AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+/")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0hy4"]
+albedo_color = Color(0.7137255, 0.35686275, 0.20392157, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o0j65"]
+data = PackedVector3Array(-1.5, -0.125, -2, -1.5, 0.125, -1, -1.5, -0.125, -1, -1.5, -0.125, -2, -1.5, -0.125, -1, 1.5, -0.125, -2, -1.5, -0.125, -2, 1.5, -0.125, -2, -1.5, 0.125, -2, -1.5, -0.125, 2, -1.5, -0.125, 1, -1.5, 0.125, 2, -1.5, -0.125, 2, 1.5, -0.125, 1, -1.5, -0.125, 1, -1.5, -0.125, -2, -1.5, 0.125, -2, -1.5, 0.125, -1, -1.5, 0.125, -2, 1.5, 0.125, -1, -1.5, 0.125, -1, -1.5, 0.125, 2, -1.5, -0.125, 1, -1.5, 0.125, 1, -1.5, -0.125, 2, -1.5, 0.125, 2, 1.5, 0.125, 2, -1.5, 0.125, 2, -1.5, 0.125, 1, 1.5, 0.125, 2, 1.5, -0.125, -2, -1.5, -0.125, -1, 1.5, -0.125, -1, 1.5, -0.125, -2, 1.5, -0.125, -1, 1.5, 0.125, -2, -1.5, -0.125, 2, 1.5, -0.125, 2, 1.5, -0.125, 1, -1.5, -0.125, 2, 1.5, 0.125, 2, 1.5, -0.125, 2, 1.5, -0.125, 2, 1.5, 0.125, 1, 1.5, -0.125, 1, -1.5, 0.125, -2, 1.5, -0.125, -2, 1.5, 0.125, -2, -1.5, 0.125, -2, 1.5, 0.125, -2, 1.5, 0.125, -1, 1.5, 0.125, -2, 1.5, -0.125, -1, 1.5, 0.125, -1, 1.5, 0.125, 2, -1.5, 0.125, 1, 1.5, 0.125, 1, 1.5, -0.125, 2, 1.5, 0.125, 2, 1.5, 0.125, 1, -1.5, 0.125, -1, 1.5, -0.125, -1, -1.5, -0.125, -1, -1.5, -0.125, 1, 1.5, 0.125, 1, -1.5, 0.125, 1, 1.5, -0.125, 1, 1.5, 0.125, 1, -1.5, -0.125, 1, 1.5, -0.125, -1, -1.5, 0.125, -1, 1.5, 0.125, -1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ci7l1"]
+size = Vector3(3, 0.25, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o0j65"]
+albedo_color = Color(0.003921569, 0.8745098, 0.003921569, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_50u5u"]
+data = PackedVector3Array(-1.5, 0.125, 2, 1.5, 0.125, 2, -1.5, -0.125, 2, 1.5, 0.125, 2, 1.5, -0.125, 2, -1.5, -0.125, 2, 1.5, 0.125, -2, -1.5, 0.125, -2, 1.5, -0.125, -2, -1.5, 0.125, -2, -1.5, -0.125, -2, 1.5, -0.125, -2, 1.5, 0.125, 2, 1.5, 0.125, -2, 1.5, -0.125, 2, 1.5, 0.125, -2, 1.5, -0.125, -2, 1.5, -0.125, 2, -1.5, 0.125, -2, -1.5, 0.125, 2, -1.5, -0.125, -2, -1.5, 0.125, 2, -1.5, -0.125, 2, -1.5, -0.125, -2, 1.5, 0.125, 2, -1.5, 0.125, 2, 1.5, 0.125, -2, -1.5, 0.125, 2, -1.5, 0.125, -2, 1.5, 0.125, -2, -1.5, -0.125, 2, 1.5, -0.125, 2, -1.5, -0.125, -2, 1.5, -0.125, 2, 1.5, -0.125, -2, -1.5, -0.125, -2)
+
+[node name="PlatformGap" type="Node3D" unique_id=2085047319]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1898271396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("ArrayMesh_ci7l1")
+surface_material_override/0 = SubResource("StandardMaterial3D_p0hy4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1786330738]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=1700451826]
+shape = SubResource("ConcavePolygonShape3D_o0j65")
+
+[node name="Toxic" type="Area3D" parent="." unique_id=2016568164 groups=["toxic"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Toxic" unique_id=106383073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_ci7l1")
+surface_material_override/0 = SubResource("StandardMaterial3D_o0j65")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Toxic" unique_id=1122156763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+shape = SubResource("ConcavePolygonShape3D_50u5u")

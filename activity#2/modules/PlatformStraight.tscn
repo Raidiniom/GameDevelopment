@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://besus3qunjfqg"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wvoj3"]
+data = PackedVector3Array(-1.5, 0.125, 2, 1.5, 0.125, 2, -1.5, -0.125, 2, 1.5, 0.125, 2, 1.5, -0.125, 2, -1.5, -0.125, 2, 1.5, 0.125, -2, -1.5, 0.125, -2, 1.5, -0.125, -2, -1.5, 0.125, -2, -1.5, -0.125, -2, 1.5, -0.125, -2, 1.5, 0.125, 2, 1.5, 0.125, -2, 1.5, -0.125, 2, 1.5, 0.125, -2, 1.5, -0.125, -2, 1.5, -0.125, 2, -1.5, 0.125, -2, -1.5, 0.125, 2, -1.5, -0.125, -2, -1.5, 0.125, 2, -1.5, -0.125, 2, -1.5, -0.125, -2, 1.5, 0.125, 2, -1.5, 0.125, 2, 1.5, 0.125, -2, -1.5, 0.125, 2, -1.5, 0.125, -2, 1.5, 0.125, -2, -1.5, -0.125, 2, 1.5, -0.125, 2, -1.5, -0.125, -2, 1.5, -0.125, 2, 1.5, -0.125, -2, -1.5, -0.125, -2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w0uey"]
+size = Vector3(3, 0.25, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdraf"]
+albedo_color = Color(0.7137255, 0.35686275, 0.20392157, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxyvf"]
+albedo_color = Color(0.003921569, 0.8745098, 0.003921569, 1)
+
+[node name="PlatformStraight" type="Node3D" unique_id=1471631171]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=499827541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1885092364]
+shape = SubResource("ConcavePolygonShape3D_wvoj3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1069316989]
+mesh = SubResource("BoxMesh_w0uey")
+surface_material_override/0 = SubResource("StandardMaterial3D_tdraf")
+
+[node name="Toxic" type="Area3D" parent="." unique_id=261896125 groups=["toxic"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Toxic" unique_id=1863634921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+shape = SubResource("ConcavePolygonShape3D_wvoj3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Toxic" unique_id=992185418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_w0uey")
+surface_material_override/0 = SubResource("StandardMaterial3D_fxyvf")

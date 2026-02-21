@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cftmcxu1xb40p"]
+
+[ext_resource type="Script" uid="uid://coeruebia7fmg" path="res://platform_spawner.gd" id="1_g1kgw"]
+[ext_resource type="Script" uid="uid://cnfd43pehp43n" path="res://player.gd" id="1_jh0ff"]
+[ext_resource type="PackedScene" uid="uid://besus3qunjfqg" path="res://modules/PlatformStraight.tscn" id="2_7vfow"]
+[ext_resource type="PackedScene" uid="uid://32jlw28etxrm" path="res://modules/PlatformGap.tscn" id="3_jh0ff"]
+[ext_resource type="PackedScene" uid="uid://ciwaybx2ky17b" path="res://modules/platform_right_gap.tscn" id="4_7brnk"]
+[ext_resource type="PackedScene" uid="uid://c134e01i2ddb6" path="res://modules/platform_left_gap.tscn" id="5_6kmpf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7vfow"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jh0ff"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_aqdgo"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_g1kgw"]
+sky_material = SubResource("ProceduralSkyMaterial_aqdgo")
+
+[sub_resource type="Environment" id="Environment_77npa"]
+background_mode = 2
+sky = SubResource("Sky_g1kgw")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="TempleRun" type="Node3D" unique_id=1637208487]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=574091718]
+transform = Transform3D(1, 0, 0, 0, 0.95908207, 0.2831283, 0, -0.2831283, 0.95908207, 0, 5.8280063, 5.2487154)
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=182111839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+script = ExtResource("1_jh0ff")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1351032792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7683716e-07, 0)
+shape = SubResource("CapsuleShape3D_7vfow")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=672716896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7683716e-07, 0)
+mesh = SubResource("CapsuleMesh_jh0ff")
+
+[node name="PlatformSpawner" type="Node3D" parent="." unique_id=1445806598]
+script = ExtResource("1_g1kgw")
+platform_scenes = Array[PackedScene]([ExtResource("2_7vfow"), ExtResource("3_jh0ff"), ExtResource("4_7brnk"), ExtResource("5_6kmpf")])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="PlatformSpawner" unique_id=567975364]
+environment = SubResource("Environment_77npa")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="PlatformSpawner" unique_id=519450732]
+transform = Transform3D(-0.6484144, 0.007233427, 0.7612533, 0.5740722, 0.6613983, 0.48269406, -0.5000001, 0.75, -0.4330126, 6.9785485, 5.2736607, -1.3824301)
+light_color = Color(0.96289045, 0.90864927, 0.88823277, 1)
+shadow_enabled = true
