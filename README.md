@@ -20,7 +20,7 @@ Subtopics: Handling input (keyboard/gamepad), physics bodies (rigid/kinematic), 
 
 ### Week 2: Activity #2
 Endless Runner (Temple Runlike)
-![](<>)
+![Simple Temple Run](<screenshots/Screenshot 2026-02-23 220847.png>)
 
 Tilemaps for grid-based levels, adding hazards (spikes/traps), designing flow (pacing, difficulty curves). 
 Activity : Design of 2 levels for an endless runner (2D or 3D); Level 1 should be noticeable easier than level 2. Implement traps. No HP, once caught in trap restart from the beginning of the level. There should be a notification when entering level 2.
