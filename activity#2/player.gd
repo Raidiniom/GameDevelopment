@@ -7,6 +7,8 @@ extends CharacterBody3D
 @export var death_y_level := -10.0
 
 var is_dead := false
+signal player_died
+
 var spawn_position : Vector3
 
 func _ready():
@@ -21,18 +23,13 @@ func _physics_process(delta):
 
 	# ---- LEFT / RIGHT MICRO MOVEMENT ----
 	var input_dir := 0.0
-	
+
 	if Input.is_action_pressed("left"):
 		input_dir -= 1
 	if Input.is_action_pressed("right"):
 		input_dir += 1
-	
+
 	velocity.x = input_dir * move_speed
-	
-	# Clamp player inside lane bounds
-	var new_x = global_position.x + velocity.x * delta
-	new_x = clamp(new_x, -max_x_limit, max_x_limit)
-	global_position.x = new_x
 	
 	# ---- GRAVITY ----
 	if not is_on_floor():
@@ -46,13 +43,21 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
+	global_position.x = clamp(global_position.x, -max_x_limit, max_x_limit)
 
-func _on_ToxicTrigger_body_entered(body):
-	if body == self:
-		die()
+	# ---- TOXIC CHECK ----
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+
+		if collider and collider.is_in_group("toxicsludge"):
+			die()
 
 func die():
+	if is_dead:
+		return
 	is_dead = true
+	emit_signal("player_died")
 	print("Player Died")
 
 func respawn():

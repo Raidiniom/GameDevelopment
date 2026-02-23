@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://cftmcxu1xb40p"]
 
+[ext_resource type="Script" uid="uid://dtq4vo083sbl8" path="res://temple_run.gd" id="1_7brnk"]
 [ext_resource type="Script" uid="uid://coeruebia7fmg" path="res://platform_spawner.gd" id="1_g1kgw"]
 [ext_resource type="Script" uid="uid://cnfd43pehp43n" path="res://player.gd" id="1_jh0ff"]
 [ext_resource type="PackedScene" uid="uid://besus3qunjfqg" path="res://modules/PlatformStraight.tscn" id="2_7vfow"]
 [ext_resource type="PackedScene" uid="uid://32jlw28etxrm" path="res://modules/PlatformGap.tscn" id="3_jh0ff"]
 [ext_resource type="PackedScene" uid="uid://ciwaybx2ky17b" path="res://modules/platform_right_gap.tscn" id="4_7brnk"]
 [ext_resource type="PackedScene" uid="uid://c134e01i2ddb6" path="res://modules/platform_left_gap.tscn" id="5_6kmpf"]
+[ext_resource type="PackedScene" uid="uid://cio6ha6cbbfh8" path="res://modules/platformlvl_2_potholes.tscn" id="8_k60q2"]
+[ext_resource type="PackedScene" uid="uid://dtkwa58e0j788" path="res://modules/platformlvl_2_leftgap.tscn" id="9_4mlqu"]
+[ext_resource type="PackedScene" uid="uid://c5kdb2hnagg0j" path="res://modules/platformlvl_2_rightgap.tscn" id="10_qs7no"]
+[ext_resource type="PackedScene" uid="uid://dd57jutkwileq" path="res://modules/platformlvl_2_potholesv_2.tscn" id="11_5gmem"]
+[ext_resource type="PackedScene" uid="uid://bom3ldsokribq" path="res://modules/platformlvl_2_tightrope.tscn" id="12_ckwyw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7vfow"]
+height = 1.5
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jh0ff"]
 
@@ -25,17 +32,22 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="TempleRun" type="Node3D" unique_id=1637208487]
+script = ExtResource("1_7brnk")
+
+[node name="MessageContainer" type="Label3D" parent="." unique_id=671485860]
+transform = Transform3D(1, 0, 0, 0, 0.9341486, 0.35688466, 0, -0.35688466, 0.9341486, 0, 5.3873944, 1.9765081)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=574091718]
-transform = Transform3D(1, 0, 0, 0, 0.95908207, 0.2831283, 0, -0.2831283, 0.95908207, 0, 5.8280063, 5.2487154)
+transform = Transform3D(1, 0, 0, 0, 0.9648837, 0.26267758, 0, -0.26267758, 0.9648837, 0, 5.8280063, 2.9842682)
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=182111839]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
 script = ExtResource("1_jh0ff")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1351032792]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7683716e-07, 0)
 shape = SubResource("CapsuleShape3D_7vfow")
+debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=672716896]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7683716e-07, 0)
@@ -43,7 +55,8 @@ mesh = SubResource("CapsuleMesh_jh0ff")
 
 [node name="PlatformSpawner" type="Node3D" parent="." unique_id=1445806598]
 script = ExtResource("1_g1kgw")
-platform_scenes = Array[PackedScene]([ExtResource("2_7vfow"), ExtResource("3_jh0ff"), ExtResource("4_7brnk"), ExtResource("5_6kmpf")])
+platform_scenes_lvl1 = Array[PackedScene]([ExtResource("2_7vfow"), ExtResource("3_jh0ff"), ExtResource("5_6kmpf"), ExtResource("4_7brnk")])
+platform_scenes_lvl2 = Array[PackedScene]([ExtResource("8_k60q2"), ExtResource("9_4mlqu"), ExtResource("10_qs7no"), ExtResource("11_5gmem"), ExtResource("12_ckwyw")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="PlatformSpawner" unique_id=567975364]
 environment = SubResource("Environment_77npa")

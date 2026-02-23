@@ -3,6 +3,9 @@ Repository for Game Development Activities
 
 Using the Godot Engine. 
 
+# Note
+activity#2 file will be used as continuation for all activities in the future
+
 # Activity
 ### Hello World
 Display simple "Hello World" text in a 2D or 3D scene

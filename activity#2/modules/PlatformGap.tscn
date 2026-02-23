@@ -38,9 +38,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p0hy4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=1700451826]
 shape = SubResource("ConcavePolygonShape3D_o0j65")
 
-[node name="Toxic" type="Area3D" parent="." unique_id=2016568164 groups=["toxic"]]
+[node name="Toxic" type="StaticBody3D" parent="." unique_id=636947397 groups=["toxicsludge"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-collision_layer = 2
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Toxic" unique_id=106383073]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
