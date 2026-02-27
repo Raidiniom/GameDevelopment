@@ -35,3 +35,9 @@ transform = Transform3D(1, 0, 0, 0, 0.78734356, 1.3327216, 0, -0.3833839, 2.7369
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=360060872]
 transform = Transform3D(1, 0, 0, 0, 1.1396573, -0.020631999, 0, 0.07172111, 0.32784513, 0, 0.4714058, -0.2784965)
+
+[node name="walk_sound" type="AudioStreamPlayer" parent="." unique_id=214363575]
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="." unique_id=185191886]
+
+[node name="takedmg_sound" type="AudioStreamPlayer" parent="." unique_id=305009304]

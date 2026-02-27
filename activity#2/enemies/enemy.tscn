@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dpeivcxv8gi20"]
+
+[ext_resource type="Script" uid="uid://bjgbhusl2dxdb" path="res://enemies/simple_enemy.gd" id="1_fw1ev"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7frlh"]
+albedo_color = Color(0.8627451, 0.078431375, 0.23529412, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_orwns"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a6vjd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fw1ev"]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=937995986]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
+script = ExtResource("1_fw1ev")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=7317564]
+material_override = SubResource("StandardMaterial3D_7frlh")
+mesh = SubResource("CapsuleMesh_orwns")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1492875955]
+shape = SubResource("CapsuleShape3D_a6vjd")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=697336526]
+
+[node name="AttackArea" type="Area3D" parent="." unique_id=125297800]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=2046404696]
+shape = SubResource("CapsuleShape3D_fw1ev")
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

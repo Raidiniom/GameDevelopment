@@ -117,6 +117,7 @@ func _physics_process(delta: float) -> void:
 	if can_jump:
 		if Input.is_action_just_pressed(input_jump) and is_on_floor():
 			velocity.y = jump_velocity
+			$jump_sound.play()
 			print("Jumped")
 
 	# Modify speed based on sprinting
@@ -133,6 +134,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_dir.x * move_speed
 			velocity.z = move_dir.z * move_speed
 		else:
+			$walk_sound.play()
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
 	else:
@@ -161,6 +163,7 @@ func _physics_process(delta: float) -> void:
 
 func apply_damage(amount: float):
 	health -= amount
+	$takedmg_sound.play()
 	update_healthbar()
 	print("Player health: ", health)
 	print("damage recieve: ", amount)

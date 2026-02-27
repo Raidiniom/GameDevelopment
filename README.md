@@ -4,7 +4,7 @@ Repository for Game Development Activities
 Using the Godot Engine. 
 
 # Note
-activity#2 file will be used as continuation for all activities in the future
+activity#2 file will be used as continuation for all activities in the future   
 
 # Activity
 ### Hello World
@@ -24,3 +24,20 @@ Endless Runner (Temple Runlike)
 
 Tilemaps for grid-based levels, adding hazards (spikes/traps), designing flow (pacing, difficulty curves). 
 Activity : Design of 2 levels for an endless runner (2D or 3D); Level 1 should be noticeable easier than level 2. Implement traps. No HP, once caught in trap restart from the beginning of the level. There should be a notification when entering level 2.
+
+### Week 3: 
+## Activity1 UI/UX & Audio
+Subtopics:
+      HUD elements (health bars, scores), menu systems (CanvasLayer), audio
+      buses for mixing SFX/music.
+Exercises:
+      Integrate UI into your game proto; add sound effects, walk, run, slash, etc. You may also add game music, introduction, and so on.
+
+## Activity 2 AI & Enemies
+Subtopics:
+      Pathfinding navigation, finite state machines for behaviors
+      (patrol/attack), enemy AI patterns.
+Exercises:
+      Add enemies to your game (note enemies, not obstacles)
+
+![Sample Code and Nodes](<screenshots/Screenshot 2026-02-27 144815.png>)
