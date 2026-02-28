@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://h7ishc4edhai" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="AudioStream" uid="uid://crhi2570d3sft" path="res://audio/sfx/julia_music-walking-soundscape-200112.mp3" id="2_6dqce"]
+[ext_resource type="AudioStream" uid="uid://jo0p38yen0rj" path="res://audio/sfx/FEETHmn_Jumping on dirt road 1 (ID 1837)_BigSoundBank.com.wav" id="3_0rk7u"]
+[ext_resource type="AudioStream" uid="uid://f5tsnamacjgt" path="res://audio/sfx/01._damage_grunt_male.wav" id="4_h60nn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -37,7 +40,10 @@ transform = Transform3D(1, 0, 0, 0, 0.78734356, 1.3327216, 0, -0.3833839, 2.7369
 transform = Transform3D(1, 0, 0, 0, 1.1396573, -0.020631999, 0, 0.07172111, 0.32784513, 0, 0.4714058, -0.2784965)
 
 [node name="walk_sound" type="AudioStreamPlayer" parent="." unique_id=214363575]
+stream = ExtResource("2_6dqce")
 
 [node name="jump_sound" type="AudioStreamPlayer" parent="." unique_id=185191886]
+stream = ExtResource("3_0rk7u")
 
 [node name="takedmg_sound" type="AudioStreamPlayer" parent="." unique_id=305009304]
+stream = ExtResource("4_h60nn")
