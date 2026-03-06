@@ -40,6 +40,6 @@ func _on_attack_area_body_exited(body):
 		player_in_range = null
 
 func start_attacking():
-	while player_in_range:
+	while player_in_range and not player_in_range.is_dead:
 		player_in_range.apply_damage(damage)
 		await get_tree().create_timer(attack_cooldown).timeout

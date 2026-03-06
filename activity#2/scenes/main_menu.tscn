@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://2x43mi240gkb"]
+
+[ext_resource type="Script" uid="uid://6sw0e48syiut" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6cm7"]
+font_color = Color(0.40032792, 0.6469994, 1.92523e-07, 1)
+
+[node name="MainMenu" type="Control" unique_id=322432407]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_l6cm7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=816149631]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 250.0
+offset_right = 720.0
+offset_bottom = 350.0
+alignment = 1
+
+[node name="OpenWorld" type="Button" parent="VBoxContainer" unique_id=670728263]
+layout_mode = 2
+text = "Open World"
+
+[node name="TempleRun" type="Button" parent="VBoxContainer" unique_id=2035216215]
+layout_mode = 2
+text = "Temple Run"
+
+[node name="Label" type="Label" parent="." unique_id=949586124]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 229.0
+offset_right = 730.0
+offset_bottom = 252.0
+text = "Game Development Games"
+label_settings = SubResource("LabelSettings_l6cm7")
+
+[connection signal="pressed" from="VBoxContainer/OpenWorld" to="." method="_on_open_world_pressed"]
+[connection signal="pressed" from="VBoxContainer/TempleRun" to="." method="_on_temple_run_pressed"]

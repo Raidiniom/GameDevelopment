@@ -14,6 +14,8 @@ var current_level := 1
 var spawned_platforms = []
 
 func _ready():
+	player.player_respawned.connect(reset_level)
+	
 	for i in range(spawn_distance):
 		spawn_platform()
 
@@ -76,3 +78,21 @@ func remove_old_platform():
 	if spawned_platforms.size() > spawn_distance:
 		var old_plat = spawned_platforms.pop_front()
 		old_plat.queue_free()
+
+func reset_level():
+	print("Resetting Level")
+
+	# Reset progression
+	distance_travelled = 0
+	current_level = 1
+	world_speed = 5.0
+
+	# Delete old platforms
+	for p in spawned_platforms:
+		p.queue_free()
+
+	spawned_platforms.clear()
+
+	# Spawn new starting platforms
+	for i in range(spawn_distance):
+		spawn_platform()

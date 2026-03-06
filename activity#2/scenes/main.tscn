@@ -143,3 +143,15 @@ input_back = "backward"
 
 [node name="Enemy" parent="." unique_id=937995986 groups=["enemy"] instance=ExtResource("2_0xm2m")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.8333287, 0.75, 4.246742)
+
+[node name="Enemy2" parent="." unique_id=1843847648 groups=["enemy"] instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.8333287, 0.75, 6.8503103)
+
+[node name="Enemy3" parent="." unique_id=1348281068 groups=["enemy"] instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.3376822, 0.75, 4.246742)
+
+[node name="Enemy4" parent="." unique_id=1097970997 groups=["enemy"] instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.7700162, 0.75, 5.242922)
+
+[node name="Enemy5" parent="." unique_id=1201475711 groups=["enemy"] instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.663195, 0.75, 3.5142727)

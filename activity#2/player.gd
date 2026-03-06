@@ -8,6 +8,7 @@ extends CharacterBody3D
 
 var is_dead := false
 signal player_died
+signal player_respawned
 
 var spawn_position : Vector3
 
@@ -64,4 +65,5 @@ func respawn():
 	global_position = spawn_position
 	velocity = Vector3.ZERO
 	is_dead = false
+	emit_signal("player_respawned")
 	print("Respawned")
