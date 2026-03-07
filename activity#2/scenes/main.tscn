@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dpeivcxv8gi20" path="res://enemies/enemy.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dcilcvuu13xyf" path="res://scenes/canvas_layer.tscn" id="3_sugp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -155,3 +156,5 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.7700162, 0.75, 5.2429
 
 [node name="Enemy5" parent="." unique_id=1201475711 groups=["enemy"] instance=ExtResource("2_0xm2m")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.663195, 0.75, 3.5142727)
+
+[node name="CanvasLayer" parent="." unique_id=1312947822 instance=ExtResource("3_sugp2")]

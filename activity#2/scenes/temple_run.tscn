@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c5kdb2hnagg0j" path="res://modules/platformlvl_2_rightgap.tscn" id="10_hkkrx"]
 [ext_resource type="PackedScene" uid="uid://dd57jutkwileq" path="res://modules/platformlvl_2_potholesv_2.tscn" id="11_4bbmt"]
 [ext_resource type="PackedScene" uid="uid://bom3ldsokribq" path="res://modules/platformlvl_2_tightrope.tscn" id="12_b6jtx"]
+[ext_resource type="PackedScene" uid="uid://dcilcvuu13xyf" path="res://scenes/canvas_layer.tscn" id="13_pjrbh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7vfow"]
 height = 1.5
@@ -69,3 +70,5 @@ environment = SubResource("Environment_77npa")
 transform = Transform3D(-0.6484144, 0.007233427, 0.7612533, 0.5740722, 0.6613983, 0.48269406, -0.5000001, 0.75, -0.4330126, 6.9785485, 5.2736607, -1.3824301)
 light_color = Color(0.96289045, 0.90864927, 0.88823277, 1)
 shadow_enabled = true
+
+[node name="CanvasLayer" parent="." unique_id=1312947822 instance=ExtResource("13_pjrbh")]
