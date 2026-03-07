@@ -74,7 +74,7 @@ func _ready() -> void:
 	update_healthbar()
 	spawn_position = global_position
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	# Mouse capturing
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		capture_mouse()
@@ -83,6 +83,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	# Look around
 	if mouse_captured and event is InputEventMouseMotion:
+		rotate_look(event.relative)
+	
+	if event is InputEventScreenDrag:
 		rotate_look(event.relative)
 	
 	# Toggle freefly mode

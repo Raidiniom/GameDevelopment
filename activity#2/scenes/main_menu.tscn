@@ -3,19 +3,24 @@
 [ext_resource type="Script" uid="uid://6sw0e48syiut" path="res://scenes/main_menu.gd" id="1_l6cm7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_l6cm7"]
+font_size = 20
 font_color = Color(0.40032792, 0.6469994, 1.92523e-07, 1)
 
 [node name="MainMenu" type="Control" unique_id=322432407]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_l6cm7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=816149631]
 layout_mode = 0
-offset_left = 520.0
-offset_top = 250.0
-offset_right = 720.0
-offset_bottom = 350.0
+offset_left = 374.0
+offset_top = 186.0
+offset_right = 858.0
+offset_bottom = 482.0
 alignment = 1
 
 [node name="OpenWorld" type="Button" parent="VBoxContainer" unique_id=670728263]
@@ -28,12 +33,15 @@ text = "Temple Run"
 
 [node name="Label" type="Label" parent="." unique_id=949586124]
 layout_mode = 0
-offset_left = 519.0
-offset_top = 229.0
-offset_right = 730.0
-offset_bottom = 252.0
+offset_left = 442.0
+offset_top = 207.0
+offset_right = 802.0
+offset_bottom = 270.0
 text = "Game Development Games"
 label_settings = SubResource("LabelSettings_l6cm7")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="VBoxContainer/OpenWorld" to="." method="_on_open_world_pressed"]
 [connection signal="pressed" from="VBoxContainer/TempleRun" to="." method="_on_temple_run_pressed"]
