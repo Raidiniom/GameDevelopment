@@ -49,3 +49,9 @@ Subtopics:
       for FPS optimization.
 Exercises:
       Convert your 2D proto to 3D; optimize for 60 FPS.
+
+### Activity 2 : Export Game to Mobile APK
+
+![Android APK](<screenshots/evidence.jpg>)
+![Screenshot](<screenshots/mobile_game.jpg>)
+<video src="screenshots/video_mobile_game.mp4" controls></video>
