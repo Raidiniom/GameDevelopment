@@ -1,47 +1,49 @@
 [gd_scene format=3 uid="uid://dcilcvuu13xyf"]
 
 [ext_resource type="Texture2D" uid="uid://r23qp4tqb38" path="res://images/right-arrow-svgrepo-com.svg" id="1_c4rma"]
+[ext_resource type="Script" uid="uid://djdsa1vv55gme" path="res://scenes/control.gd" id="1_ghj5q"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1312947822]
 
 [node name="Control" type="Control" parent="." unique_id=1626577446]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 34.0
-offset_top = 387.0
-offset_right = 1114.0
-offset_bottom = 564.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ghj5q")
 
 [node name="Forward" type="TouchScreenButton" parent="Control" unique_id=1392510383]
-position = Vector2(84.99999, 63.999996)
+position = Vector2(137, 474.99994)
 rotation = -1.5707964
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_c4rma")
 action = "forward"
 
 [node name="Backward" type="TouchScreenButton" parent="Control" unique_id=60651095]
-position = Vector2(163.99998, 109.99999)
+position = Vector2(215.99998, 520.99994)
 rotation = 1.5707964
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_c4rma")
 action = "backward"
 
 [node name="Left" type="TouchScreenButton" parent="Control" unique_id=1501851040]
-position = Vector2(78.99999, 123.99999)
+position = Vector2(131, 534.99994)
 rotation = 3.1415927
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_c4rma")
 action = "left"
 
 [node name="Right" type="TouchScreenButton" parent="Control" unique_id=673444590]
-position = Vector2(178.99998, 47.999996)
+position = Vector2(225.99998, 453.99997)
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_c4rma")
 action = "right"
 
 [node name="Jump" type="TouchScreenButton" parent="Control" unique_id=539983140]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(988.99994, 116.99999)
+position = Vector2(934.00006, 537.99994)
 rotation = -1.5707964
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_c4rma")
