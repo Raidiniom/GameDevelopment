@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcilcvuu13xyf"]
 
 [ext_resource type="Texture2D" uid="uid://r23qp4tqb38" path="res://images/right-arrow-svgrepo-com.svg" id="1_c4rma"]
-[ext_resource type="Script" uid="uid://djdsa1vv55gme" path="res://scenes/control.gd" id="1_ghj5q"]
+[ext_resource type="Script" uid="uid://djdsa1vv55gme" path="res://scenes/mobile_controls.gd" id="1_ghj5q"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1312947822]
 
