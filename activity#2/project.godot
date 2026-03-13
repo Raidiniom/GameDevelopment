@@ -22,6 +22,9 @@ Nakama="*uid://dkipoyltng2jo"
 [global_group]
 
 toxicsludge="The toxic sludge below the rock platform that will kill the player if they stand on it"
+player=""
+enemy=""
+spawn_point=""
 
 [input]
 

@@ -82,7 +82,10 @@ func _on_login_button_button_down():
 
 func setupMultiplayerBridge():
 	multiplayerBridge = NakamaMultiplayerBridge.new(socket)
+	
+	multiplayerBridge.match_joined.connect(onMatchJoin)
 	multiplayerBridge.match_join_error.connect(onMatchJoinError)
+	
 	get_tree().get_multiplayer().set_multiplayer_peer(multiplayerBridge.multiplayer_peer)
 	get_tree().get_multiplayer().peer_connected.connect(onPeerConnect)
 	get_tree().get_multiplayer().peer_disconnected.connect(onPeerDisconnect)
@@ -153,6 +156,10 @@ func _on_retreive_data_button_down():
 		print(i)
 
 func _on_join_create_btn_button_down():
+	if multiplayerBridge.match_id != "":
+		print("Already in a match")
+		return
+		
 	multiplayerBridge.join_named_match($Panel4/MatchNameInput.text)
 	#var createMatch = await socket.create_match_async($Panel4/MatchNameInput.text)
 	#
@@ -178,10 +185,16 @@ func sendData(message):
 	print(message)
 
 func _on_start_btn_button_down():
-	Ready(multiplayer.get_unique_id())
+	Ready.rpc(multiplayer.get_unique_id())
 
 @rpc("any_peer", "call_local")
 func Ready(id):
+	if !players.has(id):
+		players[id] = {
+			"name": id,
+			"ready": 0,
+		}
+	
 	players[id]["ready"] = 1
 	
 	if multiplayer.is_server():

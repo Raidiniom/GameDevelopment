@@ -32,15 +32,15 @@ extends CharacterBody3D
 
 @export_group("Input Actions")
 ## Name of Input Action to move Left.
-@export var input_left : String = "ui_left"
+@export var input_left : String = "left"
 ## Name of Input Action to move Right.
-@export var input_right : String = "ui_right"
+@export var input_right : String = "right"
 ## Name of Input Action to move Forward.
-@export var input_forward : String = "ui_up"
+@export var input_forward : String = "forward"
 ## Name of Input Action to move Backward.
-@export var input_back : String = "ui_down"
+@export var input_back : String = "backward"
 ## Name of Input Action to Jump.
-@export var input_jump : String = "ui_accept"
+@export var input_jump : String = "jump"
 ## Name of Input Action to Sprint.
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
@@ -68,11 +68,24 @@ var spawn_position : Vector3
 @onready var collider: CollisionShape3D = $Collider
 
 func _ready() -> void:
+	add_to_group("player")
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
 	update_healthbar()
-	spawn_position = global_position
+	
+	# Wait a frame to ensure the scene tree is fully set up
+	await get_tree().process_frame
+	
+	# Find spawn point by group
+	var spawn_points = get_tree().get_nodes_in_group("spawn_point")
+	if spawn_points.size() > 0:
+		spawn_position = spawn_points[0].global_position
+		global_position = spawn_position
+		print("Found spawn point at: ", spawn_position)
+	else:
+		spawn_position = global_position
+		push_error("No spawn point found in group 'spawn_point'!")
 
 func _input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -192,6 +205,7 @@ func respawn():
 	is_dead = false
 	health = 100
 	global_position = spawn_position
+	print("Spawn Point Global Postion: ", global_position)
 	can_move = true
 	can_jump = true
 	update_healthbar()

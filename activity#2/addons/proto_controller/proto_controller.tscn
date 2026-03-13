@@ -19,7 +19,6 @@ height = 1.8
 [node name="ProtoController" type="CharacterBody3D" unique_id=290963254]
 script = ExtResource("1_ucva2")
 can_sprint = true
-input_jump = "jump"
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=1806139830]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.4, 0)

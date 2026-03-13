@@ -98,7 +98,7 @@ func join_match(p_match_id: String) -> void:
 
 	_setup_match(res)
 
-func join_named_match(_match_name: String) -> void:
+func join_named_match(_match_name: String):
 	if _match_state != MatchState.DISCONNECTED:
 		push_error("Cannot join match when state is %s" % MatchState.keys()[_match_state])
 		return

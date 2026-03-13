@@ -17,7 +17,9 @@ func _ready():
 		
 		index += 1
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func get_spawn_postion() -> Vector3:
+	return spawnPoint.global_position
