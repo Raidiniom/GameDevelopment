@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://d1lub2xb8kiyc"]
+
+[ext_resource type="Script" uid="uid://c7vblyuhjpmw4" path="res://scenes/login.gd" id="1_pymad"]
+
+[node name="Login" type="Control" unique_id=959452494]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pymad")
+
+[node name="Panel" type="Panel" parent="." unique_id=1693666325]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 26.0
+offset_right = 1130.0
+offset_bottom = 111.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=13165277]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 20.0
+offset_right = 112.0
+offset_bottom = 43.0
+text = "Username"
+
+[node name="UsernameLabel" type="Label" parent="Panel" unique_id=715808883]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 18.0
+offset_right = 163.0
+offset_bottom = 41.0
+
+[node name="Label3" type="Label" parent="Panel" unique_id=176386030]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 48.0
+offset_right = 115.0
+offset_bottom = 71.0
+text = "Displayname"
+
+[node name="DisplaynameUsernameLabel" type="Label" parent="Panel" unique_id=900527481]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 50.0
+offset_right = 167.0
+offset_bottom = 73.0
+
+[node name="Panel2" type="Panel" parent="." unique_id=1856971687]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 40.0
+offset_right = 466.0
+offset_bottom = 228.0
+
+[node name="Label" type="Label" parent="Panel2" unique_id=202712519]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 32.0
+offset_right = 72.0
+offset_bottom = 55.0
+text = "Email"
+
+[node name="Label2" type="Label" parent="Panel2" unique_id=165910907]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 75.0
+offset_right = 104.0
+offset_bottom = 98.0
+text = "Password"
+
+[node name="EmailInput" type="LineEdit" parent="Panel2" unique_id=753395937]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 27.0
+offset_right = 398.0
+offset_bottom = 58.0
+text = "test@gmail.com"
+
+[node name="PasswordInput" type="LineEdit" parent="Panel2" unique_id=1751099749]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 75.0
+offset_right = 398.0
+offset_bottom = 106.0
+text = "password"
+
+[node name="LoginButton" type="Button" parent="Panel2" unique_id=721721594]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 138.0
+offset_right = 237.0
+offset_bottom = 169.0
+text = "Login"
+
+[node name="Panel3" type="Panel" parent="." unique_id=1173564400]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 137.0
+offset_right = 1120.0
+offset_bottom = 267.0
+
+[node name="StoreData" type="Button" parent="Panel3" unique_id=1571683201]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 17.0
+offset_right = 108.0
+offset_bottom = 48.0
+text = "Store Data"
+
+[node name="RetreiveData" type="Button" parent="Panel3" unique_id=883414193]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 59.0
+offset_right = 197.0
+offset_bottom = 90.0
+text = "Get Data from Storage"
+
+[node name="Panel4" type="Panel" parent="." unique_id=1580401215]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 44.0
+offset_right = 773.0
+offset_bottom = 225.0
+
+[node name="Label" type="Label" parent="Panel4" unique_id=809675205]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 36.0
+text = "Match Name"
+
+[node name="MatchNameInput" type="LineEdit" parent="Panel4" unique_id=1071966429]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 11.0
+offset_right = 205.5
+offset_bottom = 42.0
+
+[node name="JoinCreateBtn" type="Button" parent="Panel4" unique_id=139231054]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 62.0
+offset_right = 253.0
+offset_bottom = 93.0
+text = "Join/Create"
+
+[node name="PingBtn" type="Button" parent="Panel4" unique_id=644008467]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 62.0
+offset_right = 130.0
+offset_bottom = 93.0
+text = "Ping Match"
+
+[node name="StartBtn" type="Button" parent="Panel4" unique_id=690273462]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 110.0
+offset_right = 192.0
+offset_bottom = 141.0
+text = "Start Game"
+
+[connection signal="button_down" from="Panel2/LoginButton" to="." method="_on_login_button_button_down"]
+[connection signal="button_down" from="Panel3/StoreData" to="." method="_on_store_data_button_down"]
+[connection signal="button_down" from="Panel3/RetreiveData" to="." method="_on_retreive_data_button_down"]
+[connection signal="button_down" from="Panel4/JoinCreateBtn" to="." method="_on_join_create_btn_button_down"]
+[connection signal="button_down" from="Panel4/PingBtn" to="." method="_on_ping_btn_button_down"]
+[connection signal="button_down" from="Panel4/StartBtn" to="." method="_on_start_btn_button_down"]

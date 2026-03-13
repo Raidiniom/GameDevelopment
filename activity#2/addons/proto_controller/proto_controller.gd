@@ -150,6 +150,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Use velocity to actually move
 	move_and_slide()
+	SyncPosition.rpc(global_position)
 	
 	# Landing detection
 	if is_on_floor() and not was_on_floor:
@@ -252,3 +253,7 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+
+@rpc("any_peer")
+func SyncPosition(p):
+	global_position = p

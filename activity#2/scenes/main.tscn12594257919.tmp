@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://2smlts3vhjvp"]
 
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cuwc6jhqhtdco" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dpeivcxv8gi20" path="res://enemies/enemy.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dcilcvuu13xyf" path="res://scenes/canvas_layer.tscn" id="3_sugp2"]
@@ -136,13 +135,6 @@ mesh = SubResource("ArrayMesh_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Simple_Parkour/StaticBody3D" unique_id=997403449]
 shape = SubResource("ConcavePolygonShape3D_ig7tw")
-
-[node name="ProtoController" parent="." unique_id=1407837436 groups=["player"] instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-0.11878527, 0, -0.99292, 0, 1, 0, 0.99292, 0, -0.11878527, -4.3252764, 0.24999976, 2.1839297)
-input_left = "left"
-input_right = "right"
-input_forward = "forward"
-input_back = "backward"
 
 [node name="Enemy" parent="." unique_id=937995986 groups=["enemy"] instance=ExtResource("2_0xm2m")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.8333287, 0.75, 4.246742)

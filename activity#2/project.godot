@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Activity#2"
-run/main_scene="uid://2x43mi240gkb"
+run/main_scene="uid://d26c1wdtqemfq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Nakama="*uid://dkipoyltng2jo"
 
 [global_group]
 
