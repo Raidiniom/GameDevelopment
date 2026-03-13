@@ -1,8 +1,7 @@
 [gd_scene format=4 uid="uid://2smlts3vhjvp"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://cuwc6jhqhtdco" path="res://scenes/main.gd" id="1_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://dpeivcxv8gi20" path="res://enemies/enemy.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://cuwc6jhqhtdco" path="res://scenes/scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dcilcvuu13xyf" path="res://scenes/canvas_layer.tscn" id="3_sugp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
@@ -110,18 +109,6 @@ data = PackedVector3Array(1.3054, 0.90239996, 1.9598999, 1.3054, 0.90239996, 1.4
 script = ExtResource("1_jyhfs")
 player_character = ExtResource("1_ig7tw")
 
-[node name="Enemy4" parent="." unique_id=937995986 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.9688544, 0.5491543, -6.347652)
-
-[node name="Enemy3" parent="." unique_id=728155053 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.729605, 0.5491543, -5.546357)
-
-[node name="Enemy2" parent="." unique_id=1464329015 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.5182285, 0.5491543, -6.4641585)
-
-[node name="Enemy" parent="." unique_id=1286987862 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.381021, 0.5491543, -5.546357)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=986783814]
 environment = SubResource("Environment_0xm2m")
 
@@ -153,4 +140,4 @@ shape = SubResource("ConcavePolygonShape3D_ig7tw")
 [node name="CanvasLayer" parent="." unique_id=1312947822 instance=ExtResource("3_sugp2")]
 
 [node name="SpawnPoint" type="Node3D" parent="." unique_id=2050722602 groups=["spawn_point"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.219, 1.5510805, 3.3803558)
+transform = Transform3D(0.9998477, 0, 0.017452406, 0, 1, 0, -0.017452406, 0, 0.9998477, -2.219, 1, 3.38)

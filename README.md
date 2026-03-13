@@ -55,3 +55,14 @@ Exercises:
 ![Android APK](<screenshots/evidence.jpg>)
 ![Screenshot](<screenshots/mobile_game.jpg>)
 <video src="screenshots/video_mobile_game.mp4" controls></video>
+
+## Week 5
+### Activity 1 Multiplayer (basic cloud server) 
+Nakama client setup, authentication, matchmaking & relayed realtime sync. 
+Add basic 2-player movement sync to an existing prototype (e.g., top-down shooter or platformer); commit with working join/match demo.    Multiplayer (basic cloud server)
+Subtopics: 
+      Installing Nakama Godot SDK, connecting to Heroic Cloud or local Nakama server (Docker quick-start), device/email authentication, creating/joining matches via matchmaking or code, using Nakama's relayed multiplayer (socket + match messages), syncing player position/inputs with MultiplayerSynchronizer or manual RPC-like messages via Nakama.
+
+![UI Login](<screenshots/ui_multiplayer.png>)
+
+![Multiplayer In Game](<screenshots/in_game.png>)

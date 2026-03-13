@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d1lub2xb8kiyc"]
 
-[ext_resource type="Script" uid="uid://c7vblyuhjpmw4" path="res://scenes/login.gd" id="1_pymad"]
+[ext_resource type="Script" uid="uid://c7vblyuhjpmw4" path="res://scenes/scripts/login.gd" id="1_pymad"]
 
 [node name="Login" type="Control" unique_id=959452494]
 layout_mode = 3

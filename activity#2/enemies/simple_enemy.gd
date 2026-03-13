@@ -8,7 +8,7 @@ const gravity = 9.8
 
 var player_in_range = null
 var attack_cooldown = 1.0
-var damage = 10
+var damage = 1
 var is_attacking = false
 var target_player = null
 

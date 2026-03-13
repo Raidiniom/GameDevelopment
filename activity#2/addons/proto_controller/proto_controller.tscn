@@ -16,6 +16,14 @@ height = 1.8
 radius = 0.4
 height = 1.8
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_6dqce"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
 [node name="ProtoController" type="CharacterBody3D" unique_id=290963254]
 script = ExtResource("1_ucva2")
 can_sprint = true
@@ -47,3 +55,6 @@ stream = ExtResource("3_0rk7u")
 
 [node name="takedmg_sound" type="AudioStreamPlayer" parent="." unique_id=305009304]
 stream = ExtResource("4_h60nn")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=859171769]
+replication_config = SubResource("SceneReplicationConfig_6dqce")

@@ -11,6 +11,14 @@ albedo_color = Color(0.8627451, 0.078431375, 0.23529412, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fw1ev"]
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fw1ev"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
 [node name="Enemy" type="CharacterBody3D" unique_id=937995986]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
 script = ExtResource("1_fw1ev")
@@ -29,6 +37,9 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=2046404696]
 shape = SubResource("CapsuleShape3D_fw1ev")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1705041337]
+replication_config = SubResource("SceneReplicationConfig_fw1ev")
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
