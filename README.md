@@ -66,3 +66,4 @@ Subtopics:
 ![UI Login](<screenshots/ui_multiplayer.png>)
 
 ![Multiplayer In Game](<screenshots/in_game.png>)
+![Multiplayer In Game](<screenshots/in_game_v2.png>)
